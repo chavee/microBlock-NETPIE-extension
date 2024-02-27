@@ -125,7 +125,7 @@ Blockly.Python['netpie_msg_payload'] = function(block) {
   let code;
   switch (datatype) {
     case 'string' :
-            code = `str(payload)`;
+            code = `payload.decode('utf-8')`;
             break;
     case 'int' :
             code = `int(payload)`;
@@ -218,7 +218,7 @@ Blockly.Python['netpie_private_msg_payload'] = function(block) {
   let code;
   switch (datatype) {
     case 'string' :
-            code = `str(payload)`;
+            code = `payload.decode('utf-8')`;
             break;
     case 'int' :
             code = `int(payload)`;

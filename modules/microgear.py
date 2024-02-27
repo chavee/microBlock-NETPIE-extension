@@ -327,10 +327,10 @@ class Microgear:
 
     def tick(self):
         while True:
-            print('microgear tick ...')
+            #print('microgear tick ...')
             if (time.time() - self.lastping > self.mqttclient.keepalive):
                 self.lastping = time.time()
-                print("PING NOW",self.lastping)
+                #print("PING NOW",self.lastping)
                 self.mqttclient.ping()
             self.check_msg()
             time.sleep(0.5)
