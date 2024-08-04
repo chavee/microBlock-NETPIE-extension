@@ -33,13 +33,13 @@ function globalVariableDeclaration(block) {
     for (let i = 0, variable; variable = variables[i]; i++) {
       varName = variable.name;
       if (block.getVars().indexOf(varName) == -1) {
-        globals.push(Blockly.Python.variableDB_.getName(varName,
+        globals.push(Blockly.Python.nameDB_.getName(varName,
             Blockly.VARIABLE_CATEGORY_NAME));
       }
     }
     let devVarList = Blockly.Variables.allDeveloperVariables(workspace);
     for (let i = 0; i < devVarList.length; i++) {
-      globals.push(Blockly.Python.variableDB_.getName(devVarList[i],
+      globals.push(Blockly.Python.nameDB_.getName(devVarList[i],
           Blockly.Names.DEVELOPER_VARIABLE_TYPE));
     }
     return globals.length ?
